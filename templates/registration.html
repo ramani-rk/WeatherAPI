@@ -1,0 +1,33 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Registration</title>
+{% endblock %}
+
+
+{% block body_block %}
+    <style>
+        input#one
+        {
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <center>
+        <h1>User Registration</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                {{ufo.as_p}}
+                {{pfo.as_p}}
+            </div>
+                <input type="submit" value="Register HERE" id="one">
+
+
+        </form>
+    </center>
+</body>
+{% endblock %}
+</html>
